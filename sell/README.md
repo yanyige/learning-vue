@@ -1,6 +1,6 @@
 # sell
 
-> sell app
+> this is my first vue project, study in imooc step by step. (good good study, day day up!!!)
 
 ## Build Setup
 

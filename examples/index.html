@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app-4">
+		<ul>
+			<li v-for="todo in todos">{{ todo.text }}</li>
+		</ul>
+	</div>
+
+	<div id="app-7">
+		<ul>
+			<todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+		</ul>
+	</div>
+</body>
+
+
+</html>
+<script type="text/javascript">
+
+var app4 = new Vue({
+	el: '#app-4',
+	data: {
+		todos: [
+			{text: 'Learn js'},
+			{text: 'Learn html'},
+			{text: 'Learn css'},
+		]
+	}
+})
+
+Vue.component('todo-item', {
+	props: ['todo'],
+	template: '<li>{{ todo.text }}</li>'
+})
+
+var app7 = new Vue({
+	el: '#app-7',
+	data: {
+		groceryList: [
+			{text: 'Learn js1'},
+			{text: 'Learn html1'},
+			{text: 'Learn css1'},
+		]
+	}
+})
+</script>
